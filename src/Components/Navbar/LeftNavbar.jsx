@@ -963,36 +963,7 @@ export default function MiniDrawer() {
  </ListItemButton>
  </Link>
  </ListItem>
- <ListItem
- key="Discharge"
- disablePadding
- sx={{ display: "block" }}
- >
- <Link to="/Dashlast" style={{ textDecoration: "none" }}>
- <ListItemButton
- sx={{
- minHeight: 48,
- justifyContent: open ? "initial" : "center",
- px: 2.5,
- }}
- >
- <ListItemIcon
- sx={{
- minWidth: 0,
- mr: open ? 3 : "auto",
- justifyContent: "center",
- }}
- >
- <ExitToAppIcon />
- </ListItemIcon>
  
- <ListItemText
- primary="Waitelist Form"
- sx={{ opacity: open ? 1 : 0 }}
- />
- </ListItemButton>
- </Link>
- </ListItem>
  {/* "Admit Patient" dropdown button */}
  <ListItem
  onClick={() => setDropdown(!dropdown)}
