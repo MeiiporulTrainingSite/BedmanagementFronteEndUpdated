@@ -13,6 +13,8 @@ import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveHeatMap } from "@nivo/heatmap";
 import { ResponsiveLine } from "@nivo/line";
 import { ResponsiveScatterPlot } from "@nivo/scatterplot";
+import { HeatMap } from "@nivo/heatmap";
+import DashHeat from "./DashHeat";
 
 import Dash12 from "./Dash12";
 import { ResponsiveSankey } from "@nivo/sankey";
@@ -171,27 +173,27 @@ const Dashboard = () => {
       });
   }, []);
 
-  // 7
-  const [datas, setDatas] = useState([]);
+  // // 7
+  // const [datas, setDatas] = useState([]);
 
-  useEffect(() => {
-    // Fetch data from your API
-    fetch("http://localhost:9000/riskGet")
-      .then((response) => response.json())
-      .then((responseData) => {
-        // Map and format your API data
-        const formattedData = responseData.map((patient) => ({
-          x: patient.medicalAcuity,
-          y: patient.riskScore,
-          patientName: patient.patientName,
-          patientId: patient.patientId,
-        }));
-        setDatas(formattedData);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Fetch data from your API
+  //   fetch("http://localhost:9000/riskGet")
+  //     .then((response) => response.json())
+  //     .then((responseData) => {
+  //       // Map and format your API data
+  //       const formattedData = responseData.map((patient) => ({
+  //         x: patient.medicalAcuity,
+  //         y: patient.riskScore,
+  //         patientName: patient.patientName,
+  //         patientId: patient.patientId,
+  //       }));
+  //       setDatas(formattedData);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //     });
+  // }, []);
 // const [datax, setDatax] = useState();
 
   // useEffect(() => {
@@ -881,11 +883,35 @@ const Dashboard = () => {
               />
             </div>
           </Grid>
+        <Grid item xs={6}>
+            {" "}
+            This grid item will contain the second bar chart
+             <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "400px",
+                background: "#ffff",
+                borderRadius: "30px",
+                boxShadow: "5px 10px 6px rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              
+              <div>
+            <Grid item xs={ 4.5} sm={1} sx={{marginTop:"50px",marginRight:"467px",height:"410px",width:"254px"
+                      }}>   
+                    
+<DashHeat></DashHeat>
+</Grid>
+</div></div>
+</Grid>
 
-          <Grid item xs={6}>
+      {   /*</Grid> <Grid item xs={6}>*/}
             {" "}
             {/* This grid item will contain the second bar chart */}
-            <div
+            {/* <div
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -950,7 +976,7 @@ const Dashboard = () => {
                 }}
               /> 
             </div>
-          </Grid>
+          </Grid> */}
 
           {/* <Grid item xs={6}>
             {" "}
@@ -1057,5 +1083,8 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
+
 
 
