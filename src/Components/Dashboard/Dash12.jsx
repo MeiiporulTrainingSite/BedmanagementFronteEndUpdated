@@ -418,9 +418,11 @@ const Trend = () => {
   }, []);
 
   return (
-    <div style={{ width: '500px', height: '600px', margin: 'auto'}}>
-      <h2>Patient Census Dashboard</h2>
-      <Typography variant="h6" style={{ textAlign: 'center', marginBottom: '20px', fontFamily: "Montserrat",fontsize:"18px" }}>
+    <div style={{ width: '700px', height: '600px', margin: 'auto'}}>
+      <Typography variant="h5" style={{ textAlign: 'center', marginBottom: '-41px', fontFamily: "Montserrat",fontsize:"12px" }}>
+      <h5>Patient Census Dashboard</h5>
+</Typography>
+      <Typography variant="h6" style={{ textAlign: 'center', marginBottom: '10px', fontFamily: "Montserrat",fontsize:"12px" }}>
       The line chart showing the patient census trend over a specified period
     </Typography>
       <div
@@ -428,7 +430,7 @@ const Trend = () => {
           padding: "5px",
           height: "80px",
           marginBottom: "90px",
-          width: "100%",
+          width: "200%",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -536,4 +538,5 @@ const Trend = () => {
 };
 
 export default Trend;
+
 
