@@ -900,7 +900,7 @@ const Dashboard = () => {
             >
               
               <div>
-            <Grid item xs={ 4.5} sm={1} sx={{marginTop:"50px",marginRight:"467px",height:"410px",width:"254px"
+            <Grid item xs={ 4.5} sm={1} sx={{marginTop:"-50px",marginRight:"567px",height:"410px",width:"214px"
                       }}>   
                     
 <DashHeat></DashHeat>
@@ -1003,7 +1003,8 @@ const Dashboard = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "400px",
+                height: "450px",
+                width:"650px",
                 background: "#ffff",
                 borderRadius: "30px",
                 boxShadow: "5px 10px 6px rgba(0, 0, 0, 0.2)",
@@ -1050,11 +1051,11 @@ const Dashboard = () => {
                 ]}
               /> 
             */}
-             <Grid container spacing={3}style={{marginTop:"160px"}}>
+             {/* <Grid container spacing={3}style={{marginTop:"160px",marginLeft:"567px",height:"100px",width:"114px",}}> */}
             
             <Dash12></Dash12>
             
-               </Grid>
+               {/* </Grid> */}
 
               {/* <Button
                     type="submit"
@@ -1083,8 +1084,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-
-
 
 
